@@ -482,41 +482,60 @@ ADDONS
 TABLES
 ====================================================== */
 
+/* ======================================================
+TABLES (Updated for better fit)
+====================================================== */
+
 .table-wrapper{
   overflow-x:auto;
-  border-radius:28px;
-  border:
-  1px solid rgba(255,255,255,.06);
+  border-radius:20px;
+  border: 1px solid rgba(255,255,255,.06);
+  margin-bottom: 30px;
+  background: rgba(255,255,255,.02);
 }
 
 table{
-  width:100%;
-  min-width:850px;
-  border-collapse:collapse;
-  background:
-  rgba(255,255,255,.02);
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem; /* Reduced for better fit */
+  table-layout: auto; /* Allows cells to adjust naturally */
 }
 
 th{
-  background:
-  rgba(255,255,255,.04);
-  color:white;
-  padding:18px;
-  text-align:left;
-  font-weight:700;
-  font-size:.92rem;
+  background: rgba(255,255,255,.05);
+  color: white;
+  padding: 14px 10px; /* Reduced padding */
+  text-align: left;
+  font-weight: 700;
+  white-space: nowrap; /* Keeps headers clean */
 }
 
 td{
-  padding:18px;
-  border-bottom:
-  1px solid rgba(255,255,255,.05);
+  padding: 12px 10px; /* Reduced padding */
+  border-bottom: 1px solid rgba(255,255,255,.05);
   color:#cbd5e1;
+  vertical-align: middle;
+}
+
+/* Ensure status badges don't wrap weirdly */
+.status{
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 tr:hover td{
-  background:
-  rgba(255,255,255,.03);
+  background: rgba(255,255,255,.03);
+}
+
+/* Styling for star ratings */
+.star-rating {
+  color: #fbbf24; /* A nice, vibrant yellow */
+  letter-spacing: -2px; /* Pulls stars closer together */
+  font-size: 1rem;
 }
 
 /* ======================================================
@@ -582,6 +601,28 @@ CTA
   max-width:720px;
   margin:auto;
   color:#cbd5e1;
+}
+
+/* ======================================================
+WORKFLOW BOXES
+====================================================== */
+
+.workflow-box{
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+.workflow-box h4{
+  color: white;
+  margin-bottom: 10px;
+}
+
+.workflow-box ol{
+  padding-left: 20px;
 }
 
 /* ======================================================
@@ -872,433 +913,235 @@ RESPONSIVE
 
   </section>
 
-  <!-- SERVICES -->
-  <!-- SERVICES & PACKAGES -->
-<section class="section">
-  <div class="section-header">
-    <h2>Services & Pricing</h2>
-    <div class="section-badge">Professional Solutions</div>
-  </div>
-
-  <!-- MAIN SERVICES -->
-  <div class="services-grid">
-
-    <!-- BOOKKEEPING -->
-    <div class="service-card">
-      <h3>Bookkeeping & QuickBooks Support</h3>
-
-      <div class="price">Starts at $8/hr</div>
-
-      <ul>
-        <li>QuickBooks Online support & navigation guidance</li>
-        <li>Payroll assistance & compliance support</li>
-        <li>Bookkeeping & financial data entry</li>
-        <li>Invoice and billing support</li>
-        <li>Transaction review & reconciliation assistance</li>
-        <li>Financial records organization</li>
-        <li>QBO best practices consultation</li>
-      </ul>
-    </div>
-
-    <!-- CUSTOMER SUPPORT -->
-    <div class="service-card">
-      <h3>Customer Service & Client Support</h3>
-
-      <div class="price">Starts at $6/hr</div>
-
-      <ul>
-        <li>Email, chat & phone support</li>
-        <li>Customer onboarding assistance</li>
-        <li>Issue resolution & escalation handling</li>
-        <li>CRM updates & ticket documentation</li>
-        <li>Customer follow-ups & status updates</li>
-        <li>Knowledge base management</li>
-        <li>Customer satisfaction optimization</li>
-      </ul>
-    </div>
-
-    <!-- DISPATCH -->
-    <div class="service-card">
-      <h3>Dispatching & Operations Support</h3>
-
-      <div class="price">Starts at $6/hr</div>
-
-      <ul>
-        <li>Dispatching technicians & service requests</li>
-        <li>Scheduling & calendar coordination</li>
-        <li>Workflow tracking & operations monitoring</li>
-        <li>Service history documentation</li>
-        <li>Operations coordination support</li>
-        <li>Process optimization</li>
-        <li>Efficiency improvement support</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- SECOND ROW -->
-  <div class="services-grid" style="margin-top:20px;">
-
-    <!-- EXECUTIVE SUPPORT -->
-    <div class="service-card">
-      <h3>Executive Assistance & Admin Support</h3>
-
-      <div class="price">Starts at $6/hr</div>
-
-      <ul>
-        <li>Calendar & email management</li>
-        <li>Meeting scheduling & minute-taking</li>
-        <li>Travel coordination & itinerary planning</li>
-        <li>Document preparation & reporting</li>
-        <li>Stakeholder communication</li>
-        <li>Confidential executive support</li>
-        <li>Administrative workflow management</li>
-      </ul>
-    </div>
-
-    <!-- PROJECT SUPPORT -->
-    <div class="service-card">
-      <h3>Project & Team Management Support</h3>
-
-      <div class="price">Starts at $10/hr</div>
-
-      <ul>
-        <li>SME coaching & QA monitoring</li>
-        <li>Team performance reporting</li>
-        <li>Project coordination</li>
-        <li>Risk mitigation assistance</li>
-        <li>Resource allocation support</li>
-        <li>SOP documentation & workflow creation</li>
-        <li>Operational process improvements</li>
-      </ul>
-    </div>
-
-    <!-- TECHNICAL SUPPORT -->
-    <div class="service-card">
-      <h3>Technical & Compliance Support</h3>
-
-      <div class="price">Starts at $8/hr</div>
-
-      <ul>
-        <li>W-2 & 1099 tax form support</li>
-        <li>QuickBooks Payroll assistance</li>
-        <li>MS Excel reporting & analytics</li>
-        <li>Data validation & auditing</li>
-        <li>Compliance support assistance</li>
-        <li>Documentation management</li>
-        <li>Technical troubleshooting</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- PACKAGE SECTION -->
-  <div style="margin-top:50px;">
-    <div class="section-header">
-      <h2>Monthly Packages</h2>
-      <div class="section-badge">Flexible Plans</div>
-    </div>
-
-    <div class="services-grid">
-
-      <!-- BASIC -->
-      <div class="service-card">
-        <h3>Basic Package</h3>
-
-        <div class="price">$500</div>
-
-        <p style="margin-bottom:15px; color:var(--muted);">
-          15 Hours / Week
-        </p>
-
-        <ul>
-          <li>QBO data entry & categorization</li>
-          <li>Invoice & billing assistance</li>
-          <li>Email & chat customer support</li>
-          <li>CRM documentation & follow-ups</li>
-          <li>Weekly activity reports</li>
-        </ul>
-      </div>
-
-      <!-- STANDARD -->
-      <div class="service-card">
-        <h3>Standard Package</h3>
-
-        <div class="price">$800</div>
-
-        <p style="margin-bottom:15px; color:var(--muted);">
-          25 Hours / Week
-        </p>
-
-        <ul>
-          <li>Ongoing QBO maintenance</li>
-          <li>Expense tracking & reconciliation</li>
-          <li>Invoice follow-ups</li>
-          <li>Email, chat & phone support</li>
-          <li>SOP documentation</li>
-        </ul>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="service-card">
-        <h3>Premium Package</h3>
-
-        <div class="price">$1,300</div>
-
-        <p style="margin-bottom:15px; color:var(--muted);">
-          40 Hours / Week
-        </p>
-
-        <ul>
-          <li>Full QBO support & reconciliations</li>
-          <li>Financial reporting support</li>
-          <li>Collections & invoice management</li>
-          <li>Advanced customer support</li>
-          <li>Process optimization & SOPs</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ADD-ONS -->
-  <div style="margin-top:45px;">
-    <div class="section-header">
-      <h2>Add-On Services</h2>
-      <div class="section-badge">Optional Upgrades</div>
-    </div>
-
-    <div class="addons-grid">
-
-      <div class="addon">
-        <h4>Payroll Support</h4>
-        <p>$200/month</p>
-      </div>
-
-      <div class="addon">
-        <h4>Bookkeeping Cleanup</h4>
-        <p>$10/hr</p>
-      </div>
-
-      <div class="addon">
-        <h4>QA Audit & Coaching</h4>
-        <p>$10/hr</p>
-      </div>
-
-      <div class="addon">
-        <h4>Executive Admin Support</h4>
-        <p>$6/hr</p>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-
-  <!-- DISPATCH -->
+  <!-- SAMPLE WORKS -->
   <section class="section">
 
     <div class="section-header">
-      <h2>Dispatch Coordination Dashboard</h2>
-      <div class="section-badge">Sample Workflow</div>
+      <h2>Sample Works</h2>
+      <div class="section-badge">Proven Workflows</div>
     </div>
 
+    <!-- DISPATCH -->
+    <h3>Dispatch Coordination Dashboard</h3>
+    <div class="workflow-box">
+        <h4>Workflow</h4>
+        <ol>
+            <li>Receive customer booking request</li>
+            <li>Assign technician/team</li>
+            <li>Update calendar and schedule</li>
+            <li>Confirm appointment with customer</li>
+            <li>Monitor job completion</li>
+            <li>Update billing and invoice status</li>
+            <li>Perform customer follow-up</li>
+        </ol>
+    </div>
     <div class="table-wrapper">
       <table>
-
         <thead>
           <tr>
             <th>Job ID</th>
-            <th>Service</th>
+            <th>Service Type</th>
             <th>Technician</th>
-            <th>Status</th>
-            <th>Client</th>
-            <th>Notes</th>
+            <th>Job Status</th>
+            <th>Client / Address</th>
+            <th>Promised Window</th>
+            <th>Dispatch Notes / Scope</th>
           </tr>
         </thead>
-
         <tbody>
-
           <tr>
             <td>JOB-401</td>
             <td>HVAC</td>
-            <td>Robert Diaz</td>
+            <td>Robert Diaz (Lead Tech)</td>
             <td><span class="status blue">In Progress</span></td>
-            <td>Henderson Res.</td>
-            <td>AC compressor replacement</td>
+            <td>Henderson Residence (124 Oak St)</td>
+            <td>08:00 AM - 10:00 AM</td>
+            <td>AC compressor replacement; parts on truck.</td>
           </tr>
-
           <tr>
             <td>JOB-402</td>
             <td>Plumbing</td>
             <td>Alex Mercer</td>
             <td><span class="status yellow">En Route</span></td>
-            <td>Miller Comm.</td>
-            <td>Emergency dispatch</td>
+            <td>Miller Commercial Group (Suite 4)</td>
+            <td>09:30 AM - 11:30 AM</td>
+            <td>Main line clog backup. Emergency dispatch.</td>
           </tr>
-
           <tr>
             <td>JOB-403</td>
             <td>Locksmith</td>
             <td>Kevin Vance</td>
             <td><span class="status red">Unassigned</span></td>
-            <td>Retail Shop</td>
-            <td>Commercial rekey</td>
+            <td>Retail Shop (442 Broadway Blvd)</td>
+            <td>Immediate (Urgent)</td>
+            <td>Commercial rekey requested; tenant lockout.</td>
           </tr>
-
           <tr>
             <td>JOB-404</td>
             <td>Cleaning</td>
-            <td>Team Bravo</td>
+            <td>Team Bravo (Sarah/Ana)</td>
             <td><span class="status blue">In Progress</span></td>
-            <td>Patel Res.</td>
-            <td>Deep clean service</td>
+            <td>Patel Residence (89 Ocean Dr)</td>
+            <td>08:30 AM - 12:30 PM</td>
+            <td>Deep Clean / Move-Out checklist active.</td>
           </tr>
-
           <tr>
             <td>JOB-405</td>
             <td>HVAC</td>
             <td>Marcus Cole</td>
             <td><span class="status green">Completed</span></td>
-            <td>Gordon House</td>
-            <td>Furnace tune-up</td>
+            <td>Gordon Household (711 Pine St)</td>
+            <td>07:00 AM - 09:00 AM</td>
+            <td>Semi-annual furnace tune-up & filter swap.</td>
           </tr>
-
         </tbody>
-
       </table>
     </div>
 
-  </section>
-
-  <!-- BILLING -->
-  <section class="section">
-
-    <div class="section-header">
-      <h2>Billing & Invoice Tracker</h2>
-      <div class="section-badge">Bookeeping Sample</div>
+    <!-- BILLING -->
+    <h3>Billing & Invoice Tracker</h3>
+    <div class="workflow-box">
+        <h4>Workflow</h4>
+        <ol>
+            <li>Generate invoice based on service completion</li>
+            <li>Ensure payment terms are set (Net 15/30 or Due on Receipt)</li>
+            <li>Track payment status via QuickBooks Online</li>
+            <li>Follow up on overdue invoices</li>
+            <li>Reconcile payments once received</li>
+        </ol>
     </div>
-
     <div class="table-wrapper">
       <table>
-
         <thead>
           <tr>
             <th>Invoice #</th>
-            <th>Client</th>
-            <th>Total</th>
-            <th>Balance</th>
-            <th>Status</th>
+            <th>Client Name</th>
+            <th>Service Rendered</th>
+            <th>Job Date</th>
+            <th>Payment Terms</th>
+            <th>Invoice Total</th>
+            <th>Balance Due</th>
+            <th>Billing Status</th>
           </tr>
         </thead>
-
         <tbody>
-
           <tr>
             <td>INV-8840</td>
             <td>Laura Higgins</td>
-            <td>$215</td>
-            <td>$0</td>
-            <td><span class="status green">Paid</span></td>
+            <td>Deadbolt Installation</td>
+            <td>May 22, 2026</td>
+            <td>Due on Receipt</td>
+            <td>$215.00</td>
+            <td>$0.00</td>
+            <td><span class="status green">Paid (cc on-site)</span></td>
           </tr>
-
           <tr>
             <td>INV-8841</td>
-            <td>Apex Property</td>
-            <td>$650</td>
-            <td>$650</td>
-            <td><span class="status yellow">Awaiting</span></td>
+            <td>Apex Property Mgmt</td>
+            <td>Bi-Weekly Office Clean</td>
+            <td>May 15, 2026</td>
+            <td>Net 15</td>
+            <td>$650.00</td>
+            <td>$650.00</td>
+            <td><span class="status yellow">Awaiting Payment</span></td>
           </tr>
-
           <tr>
             <td>INV-8842</td>
             <td>Downtown Gym</td>
-            <td>$1,200</td>
-            <td>$1,200</td>
-            <td><span class="status red">Overdue</span></td>
+            <td>Commercial Hydro-Jetting</td>
+            <td>Apr 20, 2026</td>
+            <td>Net 30</td>
+            <td>$1,200.00</td>
+            <td>$1,200.00</td>
+            <td><span class="status red">Overdue (23 Days)</span></td>
           </tr>
-
           <tr>
             <td>INV-8843</td>
             <td>Thomas Sterling</td>
-            <td>$485</td>
-            <td>$485</td>
-            <td><span class="status blue">Pending</span></td>
+            <td>Emergency HVAC Repair</td>
+            <td>May 23, 2026</td>
+            <td>Due on Receipt</td>
+            <td>$485.00</td>
+            <td>$485.00</td>
+            <td><span class="status yellow">Pending Processing</span></td>
           </tr>
-
           <tr>
             <td>INV-8844</td>
-            <td>Green Valley</td>
-            <td>$3,400</td>
-            <td>$0</td>
-            <td><span class="status green">Paid</span></td>
+            <td>Green Valley School</td>
+            <td>Post-Construction Clean</td>
+            <td>May 01, 2026</td>
+            <td>Net 15</td>
+            <td>$3,400.00</td>
+            <td>$0.00</td>
+            <td><span class="status green">Paid (Check)</span></td>
           </tr>
-
         </tbody>
-
       </table>
     </div>
 
-  </section>
-
-  <!-- FOLLOW UP -->
-  <section class="section">
-
-    <div class="section-header">
-      <h2>Customer Follow-Up Tracker</h2>
-      <div class="section-badge">Customer Experience</div>
+    <!-- FOLLOW UP -->
+    <h3>Customer Follow-Up Tracker</h3>
+    <div class="workflow-box">
+        <h4>Workflow</h4>
+        <ol>
+            <li>Review feedback logs from CRM/Support tickets</li>
+            <li>Analyze customer sentiment/rating</li>
+            <li>Identify necessary retention or corrective actions</li>
+            <li>Execute action (e.g., emailing invoice, offering voucher, or adding account notes)</li>
+            <li>Document resolution in CRM</li>
+        </ol>
     </div>
-
     <div class="table-wrapper">
       <table>
-
         <thead>
           <tr>
-            <th>Client</th>
-            <th>Service</th>
-            <th>Rating</th>
-            <th>Feedback</th>
-            <th>Action</th>
+            <th>Client Name</th>
+            <th>Primary Service</th>
+            <th>Service Date</th>
+            <th>Tech Rating</th>
+            <th>Service Club Member?</th>
+            <th>Feedback / Issue Logged</th>
+            <th>Retention Action Required</th>
           </tr>
         </thead>
-
         <tbody>
-
           <tr>
             <td>Eleanor Vance</td>
-            <td>HVAC</td>
-            <td>★★★★★</td>
-            <td>Polite technician</td>
-            <td>Send winter reminder</td>
+            <td>HVAC (AC Tune-up)</td>
+            <td>May 18, 2026</td>
+            <td><span class="star-rating">★★★★★</span></td>
+            <td>Yes (Gold Plan)</td>
+            <td>Client loved tech's politeness. System running cold.</td>
+            <td>None. Send next winter scheduling reminder in Oct.</td>
           </tr>
-
           <tr>
-            <td>Rigid Realty</td>
-            <td>Locksmith</td>
-            <td>★★★★☆</td>
-            <td>Need invoice copy</td>
-            <td>Email PDF invoice</td>
+            <td>Rigid Realty LLC</td>
+            <td>Locksmith (Eviction Rekey)</td>
+            <td>May 21, 2026</td>
+            <td><span class="star-rating">★★★★☆</span></td>
+            <td>No</td>
+            <td>Fast service, but requested digital copy of invoice sent to main office.</td>
+            <td>Email PDF invoice copy to accounts payable team.</td>
           </tr>
-
           <tr>
             <td>Mark Randal</td>
-            <td>Plumbing</td>
-            <td>★★☆☆☆</td>
-            <td>Muddy footprints issue</td>
-            <td>Offer $50 voucher</td>
+            <td>Plumbing (Water Heater)</td>
+            <td>May 10, 2026</td>
+            <td><span class="star-rating">★★☆☆☆</span></td>
+            <td>No</td>
+            <td>Complaint: Tech left small muddy footprints on hallway rug.</td>
+            <td>Call client; offer $50 service voucher + complimentary rug cleaning.</td>
           </tr>
-
           <tr>
             <td>Sarah Jenkins</td>
-            <td>Cleaning</td>
-            <td>★★★★★</td>
-            <td>Microwave missed</td>
-            <td>Add account note</td>
+            <td>Cleaning (Standard Maid)</td>
+            <td>May 22, 2026</td>
+            <td><span class="star-rating">★★★★★</span></td>
+            <td>Yes (Bi-Weekly)</td>
+            <td>Missed wiping down top of microwave, but overall very happy.</td>
+            <td>Note added to account file: "Check microwave interior weekly."</td>
           </tr>
-
         </tbody>
-
       </table>
     </div>
 
