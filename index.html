@@ -10,6 +10,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
   <style>
     *{
       margin:0;
@@ -20,7 +24,13 @@
 
     body{
       font-family:'Inter',sans-serif;
-      background:#f5f7fb;
+      background:
+        linear-gradient(
+        to bottom right,
+        #eff6ff,
+        #f8fafc,
+        #eef2ff
+      );
       color:#1e293b;
       overflow-x:hidden;
     }
@@ -205,15 +215,45 @@
     }
 
     .card{
-      background:white;
+      background:rgba(255,255,255,0.75);
+      backdrop-filter:blur(14px);
+    
+      border:1px solid rgba(255,255,255,0.4);
+    
       padding:30px;
-      border-radius:24px;
-      box-shadow:0 10px 35px rgba(15,23,42,0.05);
-      transition:0.3s;
+      border-radius:28px;
+    
+      box-shadow:
+      0 10px 40px rgba(15,23,42,0.08);
+    
+      transition:0.35s ease;
+    }
+
+    .card{
+      animation:fadeUp 0.8s ease;
+    }
+    
+    @keyframes fadeUp{
+    
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+    
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    
     }
 
     .card:hover{
-      transform:translateY(-6px);
+      transform:
+      translateY(-10px)
+      scale(1.02);
+    
+      box-shadow:
+      0 20px 45px rgba(37,99,235,0.18);
     }
 
     .card h3{
@@ -366,6 +406,24 @@
       color:#64748b;
     }
 
+    .sticky-cta{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      z-index:999;
+    }
+    
+    .sticky-cta a{
+      background:#2563eb;
+      color:white;
+      padding:16px 24px;
+      border-radius:999px;
+      font-weight:700;
+    
+      box-shadow:
+      0 15px 35px rgba(37,99,235,0.35);
+    }
+
     @media(max-width:950px){
 
       .hero{
@@ -375,6 +433,46 @@
 
       .hero h1{
         font-size:2.9rem;
+      }
+
+      .hero{
+        position:relative;
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:60px;
+        padding-top:140px;
+      
+        background:
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1920&auto=format&fit=crop')
+        center/cover no-repeat;
+      
+        overflow:hidden;
+      }
+      
+      .hero-overlay{
+        position:absolute;
+        inset:0;
+        background:linear-gradient(
+          to right,
+          rgba(15,23,42,0.92),
+          rgba(15,23,42,0.75)
+        );
+      }
+      
+      .hero-text,
+      .hero-card{
+        position:relative;
+        z-index:2;
+      }
+      
+      .hero h1{
+        color:white;
+      }
+      
+      .hero p{
+        color:#e2e8f0;
       }
 
       .timeline::before{
@@ -426,6 +524,8 @@
 
   <section class="hero" id="home">
 
+  <div class="hero-overlay"></div>
+
     <div class="hero-text">
 
       <span class="tag">
@@ -442,8 +542,8 @@
 
       <div class="hero-buttons">
 
-        <a href="https://calendly.com/" target="_blank" class="btn primary">
-          Book Discovery Call
+        <a href="https://calendly.com/mafaithgrantoza/30min" target="_blank" class="btn primary">
+          Book a Discovery Call
         </a>
 
         <a href="https://www.linkedin.com/in/faithgrantozaaa" target="_blank" class="btn secondary">
@@ -476,6 +576,34 @@
     </div>
 
   </section>
+
+  <section style="padding-top:40px;">
+
+  <div class="grid cards-4">
+
+    <div class="card" style="text-align:center;">
+      <h1 style="font-size:3rem;color:#2563eb;">6+</h1>
+      <p>Years Experience</p>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <h1 style="font-size:3rem;color:#2563eb;">98%</h1>
+      <p>Issue Resolution Rate</p>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <h1 style="font-size:3rem;color:#2563eb;">100%</h1>
+      <p>Customer Satisfaction</p>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <h1 style="font-size:3rem;color:#2563eb;">1000+</h1>
+      <p>Customer Interactions Handled</p>
+    </div>
+
+  </div>
+
+</section>
 
   <!-- ABOUT -->
 
@@ -649,7 +777,7 @@
 
       <div class="card">
 
-        <h3>Customer Support Services</h3>
+        <h3><i class="fa-solid fa-headset"></i> Customer Support</h3>
 
         <ul>
           <li>Phone Support</li>
@@ -664,7 +792,7 @@
 
       <div class="card">
 
-        <h3>Dispatch Coordination & Scheduling</h3>
+        <h3><i class="fa-solid fa-calendar-check"></i> Dispatch Coordination & Scheduling</h3>
 
         <ul>
           <li>Technician Coordination</li>
@@ -679,7 +807,7 @@
 
       <div class="card">
 
-        <h3>QuickBooks & Admin Support</h3>
+        <h3><i class="fa-solid fa-file-invoice-dollar"></i> QuickBooks & Admin Support</h3>
 
         <ul>
           <li>QuickBooks Online Support</li>
@@ -1059,8 +1187,182 @@
 
       </div>
 
+      <!-- SERVICE RATES -->
+
+      <div style="margin-bottom:90px;">
+      
+        <h2 class="section-title">
+          Service Rates
+        </h2>
+      
+        <p class="section-sub">
+          Flexible hourly and project-based virtual assistant support rates tailored for service-based businesses, operations teams, and growing companies.
+        </p>
+      
+        <div class="grid cards-4">
+      
+          <!-- DISPATCH -->
+      
+          <div class="card">
+      
+            <h3>
+              Dispatching & Operations Support
+            </h3>
+      
+            <div style="
+              font-size:2.3rem;
+              font-weight:800;
+              color:#2563eb;
+              margin:20px 0;
+            ">
+              $6/hr
+            </div>
+      
+            <ul>
+              <li>Dispatch Coordination</li>
+              <li>Scheduling Management</li>
+              <li>Technician Coordination</li>
+              <li>Service Request Monitoring</li>
+              <li>Workflow Tracking</li>
+              <li>Operations Support</li>
+            </ul>
+      
+          </div>
+      
+          <!-- EXECUTIVE -->
+      
+          <div class="card">
+      
+            <h3>
+              Executive & Administrative Support
+            </h3>
+      
+            <div style="
+              font-size:2.3rem;
+              font-weight:800;
+              color:#2563eb;
+              margin:20px 0;
+            ">
+              $6/hr
+            </div>
+      
+            <ul>
+              <li>Calendar Management</li>
+              <li>Email Management</li>
+              <li>Travel Coordination</li>
+              <li>Meeting Scheduling</li>
+              <li>Document Preparation</li>
+              <li>Stakeholder Communication</li>
+            </ul>
+      
+          </div>
+      
+          <!-- BOOKKEEPING -->
+      
+          <div class="card">
+      
+            <h3>
+              Bookkeeping & QuickBooks Support
+            </h3>
+      
+            <div style="
+              font-size:2.3rem;
+              font-weight:800;
+              color:#2563eb;
+              margin:20px 0;
+            ">
+              $8/hr
+            </div>
+      
+            <ul>
+              <li>QuickBooks Online Support</li>
+              <li>Payroll Assistance</li>
+              <li>Invoice Management</li>
+              <li>Billing Support</li>
+              <li>Financial Documentation</li>
+              <li>Reconciliation Assistance</li>
+            </ul>
+      
+          </div>
+      
+          <!-- CUSTOMER SUPPORT -->
+      
+          <div class="card">
+      
+            <h3>
+              Customer Service & Client Support
+            </h3>
+      
+            <div style="
+              font-size:2.3rem;
+              font-weight:800;
+              color:#2563eb;
+              margin:20px 0;
+            ">
+              $6/hr
+            </div>
+      
+            <ul>
+              <li>Email Support</li>
+              <li>Chat Support</li>
+              <li>Phone Support</li>
+              <li>Customer Follow-Ups</li>
+              <li>Issue Resolution</li>
+              <li>CRM Documentation</li>
+            </ul>
+      
+          </div>
+      
+        </div>
+      
+      </div>
+
     </div>
 
+  </section>
+
+  <section>
+
+    <h2 class="section-title">
+      Client Feedback
+    </h2>
+  
+    <div class="grid cards-3">
+  
+      <div class="card">
+        <p>
+          “Very organized, proactive, and easy to work with.
+          Communication was always smooth.”
+        </p>
+  
+        <br>
+  
+        <h4>- Operations Client</h4>
+      </div>
+  
+      <div class="card">
+        <p>
+          “Handled scheduling and dispatch operations
+          efficiently while maintaining excellent customer support.”
+        </p>
+  
+        <br>
+  
+        <h4>- Service Business Owner</h4>
+      </div>
+  
+      <div class="card">
+        <p>
+          “Reliable, detail-oriented, and highly professional.”
+        </p>
+  
+        <br>
+  
+        <h4>- QuickBooks Support Client</h4>
+      </div>
+  
+    </div>
+  
   </section>
 
   <!-- CONTACT -->
@@ -1108,6 +1410,12 @@
   <footer>
     © 2026 Maria Faith Grantoza • Virtual Assistant Portfolio
   </footer>
-
+  <div class="sticky-cta">
+  
+    <a href="https://calendly.com/YOUR-LINK" target="_blank">
+      Book a Discovery Call
+    </a>
+  
+  </div>
 </body>
 </html>
