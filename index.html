@@ -3,1225 +3,1111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maria Faith Grantoza | Professional Portfolio</title>
+  <title>Maria Faith Grantoza | Virtual Assistant Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-  --bg:#050816;
-  --card:#0f172a;
-  --card-2:#111c33;
-  --glass:
-  rgba(15,23,42,.62);
-  --border:
-  rgba(255,255,255,.08);
-  --text:#f8fafc;
-  --muted:#94a3b8;
-  --accent:#8b5cf6;
-  --accent2:#06b6d4;
-  --accent3:#ec4899;
-  --shadow:
-  0 20px 60px rgba(0,0,0,.45);
-  --radius:28px;
-}
-
-/* ======================================================
-GLOBAL
-====================================================== */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:
-  radial-gradient(
-  circle at top left,
-  rgba(139,92,246,.18),
-  transparent 22%
-  ),
-  radial-gradient(
-  circle at bottom right,
-  rgba(6,182,212,.16),
-  transparent 22%
-  ),
-  radial-gradient(
-  circle at center,
-  rgba(236,72,153,.08),
-  transparent 30%
-  ),
-  var(--bg);
-  color:var(--text);
-  line-height:1.7;
-  overflow-x:hidden;
-}
-
-.container{
-  max-width:1250px;
-  margin:auto;
-  padding:40px 24px 120px;
-}
-
-/* ======================================================
-HERO
-====================================================== */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  background:
-  linear-gradient(
-  145deg,
-  rgba(15,23,42,.95),
-  rgba(17,28,51,.92)
-  );
-  border:
-  1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(30px);
-  border-radius:40px;
-  padding:100px 70px;
-  margin-bottom:40px;
-  box-shadow:var(--shadow);
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  width:600px;
-  height:600px;
-  background:
-  radial-gradient(
-  circle,
-  rgba(139,92,246,.20),
-  transparent 60%
-  );
-  top:-250px;
-  right:-180px;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  width:500px;
-  height:500px;
-  background:
-  radial-gradient(
-  circle,
-  rgba(6,182,212,.18),
-  transparent 60%
-  );
-  bottom:-250px;
-  left:-200px;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-}
-
-.tag{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:
-  rgba(255,255,255,.05);
-  border:
-  1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(20px);
-  padding:12px 22px;
-  border-radius:999px;
-  font-size:.85rem;
-  color:#dbeafe;
-  margin-bottom:28px;
-}
-
-.hero h1{
-  font-size:5rem;
-  line-height:.95;
-  letter-spacing:-4px;
-  margin-bottom:20px;
-  font-weight:800;
-  background:
-  linear-gradient(
-  to right,
-  #ffffff,
-  #cbd5e1
-  );
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.hero-subtitle{
-  font-size:1.15rem;
-  color:#cbd5e1;
-  margin-bottom:20px;
-  font-weight:500;
-}
-
-.hero p{
-  max-width:760px;
-  color:#94a3b8;
-  font-size:1rem;
-}
-
-.hero-contact{
-  margin-top:35px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-}
-
-.hero-contact span{
-  background:
-  rgba(255,255,255,.05);
-  border:
-  1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(20px);
-  padding:14px 18px;
-  border-radius:16px;
-  color:#e2e8f0;
-  font-size:.92rem;
-}
-
-.hero-actions{
-  margin-top:40px;
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-/* ======================================================
-BUTTONS
-====================================================== */
-
-.btn-main{
-  background:
-  linear-gradient(
-  135deg,
-  var(--accent),
-  var(--accent2)
-  );
-  color:white;
-  border:none;
-  padding:16px 32px;
-  border-radius:18px;
-  font-weight:700;
-  cursor:pointer;
-  transition:.35s ease;
-  font-size:.95rem;
-  box-shadow:
-  0 10px 30px rgba(139,92,246,.35);
-}
-
-.btn-main:hover{
-  transform:
-  translateY(-4px)
-  scale(1.02);
-}
-
-.btn-outline{
-  background:
-  rgba(255,255,255,.04);
-  border:
-  1px solid rgba(255,255,255,.08);
-  color:white;
-  padding:16px 30px;
-  border-radius:18px;
-  backdrop-filter:blur(20px);
-  cursor:pointer;
-  font-weight:600;
-  transition:.35s ease;
-}
-
-.btn-outline:hover{
-  background:
-  rgba(255,255,255,.08);
-  transform:translateY(-4px);
-}
-
-/* ======================================================
-TRUST BAR
-====================================================== */
-
-.trust-bar{
-  display:grid;
-  grid-template-columns:
-  repeat(4,1fr);
-  gap:20px;
-  margin-bottom:35px;
-}
-
-.trust-card{
-  background:
-  rgba(15,23,42,.75);
-  border:
-  1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(20px);
-  border-radius:28px;
-  padding:35px;
-  transition:.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.trust-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(
-  145deg,
-  rgba(255,255,255,.05),
-  transparent
-  );
-}
-
-.trust-card:hover{
-  transform:
-  translateY(-8px);
-  border-color:
-  rgba(139,92,246,.35);
-}
-
-.trust-card h3{
-  font-size:2.3rem;
-  margin-bottom:10px;
-  background:
-  linear-gradient(
-  to right,
-  #fff,
-  #c4b5fd
-  );
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.trust-card p{
-  color:#94a3b8;
-}
-
-/* ======================================================
-SECTION
-====================================================== */
-
-.section{
-  background:
-  rgba(15,23,42,.72);
-  border:
-  1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(28px);
-  padding:40px;
-  border-radius:32px;
-  margin-bottom:30px;
-  box-shadow:var(--shadow);
-}
-
-.section-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:16px;
-  margin-bottom:30px;
-}
-
-h2{
-  font-size:1.8rem;
-  color:white;
-  position:relative;
-  padding-bottom:14px;
-}
-
-h2::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:90px;
-  height:5px;
-  border-radius:999px;
-  background:
-  linear-gradient(
-  to right,
-  var(--accent),
-  var(--accent2)
-  );
-}
-
-.section-badge{
-  background:
-  rgba(139,92,246,.12);
-  color:#ddd6fe;
-  padding:10px 16px;
-  border-radius:999px;
-  font-size:.78rem;
-  font-weight:700;
-  border:
-  1px solid rgba(139,92,246,.25);
-}
-
-/* ======================================================
-CARDS
-====================================================== */
-
-.services-grid{
-  display:grid;
-  grid-template-columns:
-  repeat(3,1fr);
-  gap:22px;
-}
-
-.experience-grid{
-  display:grid;
-  gap:20px;
-}
-
-.experience-card,
-.service-card,
-.addon{
-  background:
-  rgba(255,255,255,.03);
-  border:
-  1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(20px);
-  border-radius:28px;
-  padding:30px;
-  transition:.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.experience-card:hover,
-.service-card:hover,
-.addon:hover{
-  transform:
-  translateY(-8px);
-  border-color:
-  rgba(139,92,246,.25);
-}
-
-.service-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:5px;
-  background:
-  linear-gradient(
-  to right,
-  var(--accent),
-  var(--accent2),
-  var(--accent3)
-  );
-}
-
-.service-card h3,
-.experience-card h3{
-  color:white;
-  margin-bottom:10px;
-}
-
-.service-card p,
-.experience-card p,
-.addon h4{
-  color:#cbd5e1;
-}
-
-.price{
-  font-size:2.5rem;
-  font-weight:800;
-  margin:20px 0;
-  background:
-  linear-gradient(
-  to right,
-  #fff,
-  #c4b5fd
-  );
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.service-card li{
-  margin-bottom:12px;
-  color:#94a3b8;
-}
-
-/* ======================================================
-ADDONS
-====================================================== */
-
-.addons-grid{
-  display:grid;
-  grid-template-columns:
-  repeat(4,1fr);
-  gap:18px;
-}
-
-.addon{
-  text-align:center;
-}
-
-.addon p{
-  margin-top:8px;
-  font-weight:700;
-  color:#a5b4fc;
-}
-
-/* ======================================================
-TABLES
-====================================================== */
-
-/* ======================================================
-TABLES (Updated for better fit)
-====================================================== */
-
-.table-wrapper{
-  overflow-x:auto;
-  border-radius:20px;
-  border: 1px solid rgba(255,255,255,.06);
-  margin-bottom: 30px;
-  background: rgba(255,255,255,.02);
-}
-
-table{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.75rem; /* Reduced for better fit */
-  table-layout: auto; /* Allows cells to adjust naturally */
-}
-
-th{
-  background: rgba(255,255,255,.05);
-  color: white;
-  padding: 14px 10px; /* Reduced padding */
-  text-align: left;
-  font-weight: 700;
-  white-space: nowrap; /* Keeps headers clean */
-}
-
-td{
-  padding: 12px 10px; /* Reduced padding */
-  border-bottom: 1px solid rgba(255,255,255,.05);
-  color:#cbd5e1;
-  vertical-align: middle;
-}
-
-/* Ensure status badges don't wrap weirdly */
-.status{
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-tr:hover td{
-  background: rgba(255,255,255,.03);
-}
-
-/* Styling for star ratings */
-.star-rating {
-  color: #fbbf24; /* A nice, vibrant yellow */
-  letter-spacing: -2px; /* Pulls stars closer together */
-  font-size: 1rem;
-}
-
-/* ======================================================
-STATUS
-====================================================== */
-
-.status{
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:.75rem;
-  font-weight:700;
-}
-
-.green{
-  background:#052e16;
-  color:#86efac;
-}
-
-.yellow{
-  background:#422006;
-  color:#fde68a;
-}
-
-.red{
-  background:#450a0a;
-  color:#fca5a5;
-}
-
-.blue{
-  background:#172554;
-  color:#93c5fd;
-}
-
-/* ======================================================
-CTA
-====================================================== */
-
-.cta{
-  background:
-  linear-gradient(
-  145deg,
-  rgba(139,92,246,.18),
-  rgba(6,182,212,.15)
-  );
-  border:
-  1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(25px);
-  border-radius:38px;
-  padding:70px 50px;
-  text-align:center;
-}
-
-.cta h2{
-  color:white;
-  margin-bottom:18px;
-}
-
-.cta h2::after{
-  display:none;
-}
-
-.cta p{
-  max-width:720px;
-  margin:auto;
-  color:#cbd5e1;
-}
-
-/* ======================================================
-WORKFLOW BOXES
-====================================================== */
-
-.workflow-box{
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 30px;
-  color: #cbd5e1;
-}
-
-.workflow-box h4{
-  color: white;
-  margin-bottom: 10px;
-}
-
-.workflow-box ol{
-  padding-left: 20px;
-}
-
-/* ======================================================
-MODAL
-====================================================== */
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:
-  rgba(2,6,23,.75);
-  backdrop-filter:blur(10px);
-  z-index:999;
-}
-
-.modal-content{
-  background:
-  rgba(15,23,42,.92);
-  border:
-  1px solid rgba(255,255,255,.06);
-  backdrop-filter:blur(25px);
-  width:90%;
-  max-width:520px;
-  margin:5% auto;
-  padding:40px;
-  border-radius:34px;
-  position:relative;
-  animation:modalUp .35s ease;
-}
-
-.close{
-  position:absolute;
-  right:20px;
-  top:15px;
-  font-size:2rem;
-  color:#94a3b8;
-  cursor:pointer;
-}
-
-/* ======================================================
-FORMS
-====================================================== */
-
-input,
-textarea{
-  width:100%;
-  padding:16px;
-  margin:10px 0 18px;
-  border:
-  1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-  background:
-  rgba(255,255,255,.03);
-  color:white;
-  font-size:.95rem;
-}
-
-input::placeholder,
-textarea::placeholder{
-  color:#64748b;
-}
-
-input:focus,
-textarea:focus{
-  outline:none;
-  border-color:
-  rgba(139,92,246,.45);
-  box-shadow:
-  0 0 0 4px rgba(139,92,246,.12);
-}
-
-textarea{
-  min-height:140px;
-  resize:vertical;
-}
-
-/* ======================================================
-RESPONSIVE
-====================================================== */
-
-@media(max-width:992px){
-
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-
-  .addons-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .trust-bar{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:768px){
-
-  .hero{
-    padding:60px 30px;
-  }
-
-  .hero h1{
-    font-size:3rem;
-  }
-
-  .section{
-    padding:28px;
-  }
-
-  .addons-grid{
-    grid-template-columns:1fr;
-  }
-
-  .trust-bar{
-    grid-template-columns:1fr;
-  }
-
-  .cta{
-    padding:50px 25px;
-  }
-}
-
-@keyframes modalUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-</style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#f5f7fb;
+      color:#1e293b;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .navbar{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(12px);
+      z-index:1000;
+      border-bottom:1px solid #e2e8f0;
+    }
+
+    .nav-container{
+      max-width:1300px;
+      margin:auto;
+      padding:18px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:1.4rem;
+      font-weight:800;
+      color:#0f172a;
+      letter-spacing:-0.5px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      color:#334155;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#2563eb;
+    }
+
+    section{
+      padding:120px 8%;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:60px;
+      background:
+      linear-gradient(to right,#f8fbff,#eef5ff);
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#dbeafe;
+      color:#1d4ed8;
+      font-weight:600;
+      margin-bottom:20px;
+      font-size:0.9rem;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      line-height:1.1;
+      color:#0f172a;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:1.05rem;
+      color:#475569;
+      line-height:1.9;
+      margin-bottom:25px;
+      max-width:700px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .btn{
+      padding:15px 28px;
+      border-radius:14px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .primary{
+      background:#2563eb;
+      color:white;
+      box-shadow:0 10px 25px rgba(37,99,235,0.25);
+    }
+
+    .primary:hover{
+      transform:translateY(-2px);
+      background:#1d4ed8;
+    }
+
+    .secondary{
+      background:white;
+      color:#0f172a;
+      border:1px solid #dbe3ef;
+    }
+
+    .secondary:hover{
+      background:#f8fafc;
+    }
+
+    .hero-card{
+      flex:1;
+      background:white;
+      padding:40px;
+      border-radius:30px;
+      box-shadow:0 15px 50px rgba(15,23,42,0.08);
+    }
+
+    .hero-card img{
+      width:100%;
+      border-radius:22px;
+      margin-bottom:25px;
+    }
+
+    .hero-card h3{
+      margin-bottom:15px;
+      font-size:1.5rem;
+    }
+
+    .hero-card p{
+      line-height:1.8;
+      color:#475569;
+    }
+
+    .section-title{
+      font-size:2.7rem;
+      margin-bottom:20px;
+      color:#0f172a;
+      text-align:center;
+    }
+
+    .section-sub{
+      text-align:center;
+      color:#64748b;
+      max-width:850px;
+      margin:auto auto 60px;
+      line-height:1.8;
+    }
+
+    .grid{
+      display:grid;
+      gap:25px;
+    }
+
+    .cards-3{
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    }
+
+    .cards-4{
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:24px;
+      box-shadow:0 10px 35px rgba(15,23,42,0.05);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card h3{
+      margin-bottom:18px;
+      color:#0f172a;
+      font-size:1.25rem;
+    }
+
+    .card p{
+      color:#64748b;
+      line-height:1.8;
+    }
+
+    .card ul{
+      padding-left:18px;
+      line-height:2;
+      color:#475569;
+    }
+
+    .timeline{
+      position:relative;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:0;
+      width:3px;
+      height:100%;
+      background:#dbeafe;
+      transform:translateX(-50%);
+    }
+
+    .timeline-item{
+      width:50%;
+      padding:30px;
+      position:relative;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-content{
+      background:white;
+      padding:28px;
+      border-radius:22px;
+      box-shadow:0 10px 30px rgba(15,23,42,0.05);
+    }
+
+    .timeline-content h3{
+      margin-bottom:10px;
+      color:#2563eb;
+    }
+
+    .pricing-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .pricing-card{
+      background:white;
+      padding:40px;
+      border-radius:30px;
+      box-shadow:0 15px 45px rgba(15,23,42,0.08);
+      position:relative;
+    }
+
+    .pricing-card.featured{
+      background:#2563eb;
+      color:white;
+      transform:scale(1.03);
+    }
+
+    .pricing-card h2{
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:3rem;
+      font-weight:800;
+      margin:20px 0;
+    }
+
+    .pricing-card ul{
+      line-height:2.1;
+      padding-left:18px;
+    }
+
+    .featured ul{
+      color:#f8fafc;
+    }
+
+    .table-wrapper{
+      overflow-x:auto;
+      background:white;
+      border-radius:24px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(15,23,42,0.05);
+      margin-top:40px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    th, td{
+      padding:16px;
+      border-bottom:1px solid #e2e8f0;
+      text-align:left;
+      font-size:0.95rem;
+    }
+
+    th{
+      background:#eff6ff;
+      color:#1e3a8a;
+    }
+
+    .contact{
+      background:#0f172a;
+      color:white;
+      border-radius:40px;
+      padding:70px;
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:2.7rem;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      color:#cbd5e1;
+      margin-bottom:15px;
+      line-height:1.8;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#64748b;
+    }
+
+    @media(max-width:950px){
+
+      .hero{
+        flex-direction:column;
+        padding-top:160px;
+      }
+
+      .hero h1{
+        font-size:2.9rem;
+      }
+
+      .timeline::before{
+        left:20px;
+      }
+
+      .timeline-item{
+        width:100%;
+        left:0 !important;
+        padding-left:60px;
+      }
+
+      .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+      }
+
+      .contact{
+        padding:40px 25px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <!-- NAVIGATION -->
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
+  <nav class="navbar">
+    <div class="nav-container">
 
-      <div class="tag">
-        Available for Remote Opportunities
+      <div class="logo">
+        Maria Faith Grantoza
       </div>
 
-      <h1>Maria Faith Grantoza</h1>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-      <p class="hero-subtitle">
-        Virtual Assistant | Dispatcher | Customer Support Specialist | Scheduling, Billing & QuickBooks Support
-      </p>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <span class="tag">
+        Virtual Assistant • Dispatcher • Customer Support Specialist
+      </span>
+
+      <h1>
+        Helping Businesses Stay Organized, Efficient & Customer-Focused
+      </h1>
 
       <p>
-        Helping service-based businesses streamline operations through customer support,
-        dispatch coordination, QuickBooks Online assistance, and workflow management.
+        Hi, I’m Maria Faith Grantoza — a Virtual Assistant with experience in customer support, dispatch coordination, QuickBooks support, scheduling, operations management, and administrative assistance. I help businesses streamline workflows, improve customer experience, and maintain organized daily operations.
       </p>
 
-      <div class="hero-contact">
-        <span>📍 Teresa, Rizal, Philippines</span>
-        <span>📞 +63 950 729 7240</span>
-        <span>📧 mafaithgrantoza@gmail.com</span>
-      </div>
+      <div class="hero-buttons">
 
-      <div class="hero-actions">
-        <button class="btn-main"
-          onclick="document.getElementById('callModal').style.display='block'">
-          Book a Discovery Call
-        </button>
-
-        <a 
-          href="https://www.linkedin.com/in/faithgrantozaaa" 
-          target="_blank"
-          style="text-decoration:none;"
-        >
-          <button class="btn-outline">
-            LinkedIn
-          </button>
+        <a href="https://calendly.com/" target="_blank" class="btn primary">
+          Book Discovery Call
         </a>
 
-        <a 
-          href="MariaFaithGrantoza_Resume.pdf"
-          target="_blank"
-          style="text-decoration:none;"
-        >
-          <button class="btn-outline">
-            📄 View Resume
-          </button>
+        <a href="https://www.linkedin.com/in/faithgrantozaaa" target="_blank" class="btn secondary">
+          LinkedIn
         </a>
+
+        <a href="MariaFaithGrantoza_Resume.pdf" target="_blank" class="btn secondary">
+          View Resume
+        </a>
+
       </div>
 
     </div>
-  </header>
 
-  <!-- TRUST BAR -->
-  <section class="trust-bar">
+    <div class="hero-card">
 
-    <div class="trust-card">
-      <h3>6+</h3>
-      <p>Years of Professional Experience</p>
-    </div>
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="VA">
 
-    <div class="trust-card">
-      <h3>98%</h3>
-      <p>Issue Resolution Performance</p>
-    </div>
+      <h3>Why Work With Me?</h3>
 
-    <div class="trust-card">
-      <h3>QBO</h3>
-      <p>QuickBooks Online Expertise</p>
-    </div>
+      <p>
+        ✔ Strong customer communication skills<br><br>
+        ✔ Experienced in fast-paced service environments<br><br>
+        ✔ Organized and detail-oriented<br><br>
+        ✔ Skilled in dispatch and scheduling operations<br><br>
+        ✔ Reliable and proactive<br><br>
+        ✔ Experienced with CRM systems and remote tools
+      </p>
 
-    <div class="trust-card">
-      <h3>24/7</h3>
-      <p>Remote Operations Support</p>
     </div>
 
   </section>
 
   <!-- ABOUT -->
-  <section class="section">
 
-    <div class="section-header">
-      <h2>About Me</h2>
-      <div class="section-badge">Professional Profile</div>
-    </div>
+  <section id="about">
 
-    <p>
-      With over 6 years of experience supporting service-based businesses,
-      I specialize in dispatch coordination, customer support, bookkeeping assistance,
-      QuickBooks Online workflows, and administrative operations.
-      I thrive in fast-paced environments and focus on creating efficient,
-      organized, and client-centered systems that improve day-to-day operations.
+    <h2 class="section-title">
+      About Me
+    </h2>
+
+    <p class="section-sub">
+      Experienced Virtual Assistant with a strong background in customer service, dispatch coordination, operational workflow management, bookkeeping support, scheduling, and administrative operations.
     </p>
 
-  </section>
+    <!-- EXPERIENCES -->
 
-  <!-- EXPERIENCE -->
-  <section class="section">
+    <div class="timeline">
 
-    <div class="section-header">
-      <h2>Professional Experience</h2>
-      <div class="section-badge">Career Highlights</div>
-    </div>
-
-    <div class="experience-grid">
-
-      <div class="experience-card">
-        <span>2026 - Present</span>
-        <h3>TDCX PH</h3>
-        <p>
-          Customer Service Representative handling high-volume customer support through
-          chat, email, and phone channels while maintaining service quality and resolution accuracy.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>TDCX PH | Customer Service Representative</h3>
+          <p>
+            Handled customer inquiries through phone, chat, and email support while ensuring high customer satisfaction and accurate CRM documentation.
+          </p>
+        </div>
       </div>
 
-      <div class="experience-card">
-        <span>2024 - 2025</span>
-        <h3>Teamspan Asia Inc.</h3>
-        <p>
-          Managed dispatch coordination, scheduling, technician assignments,
-          and client service requests for facility management operations.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Teamspan Asia Inc. | Account Specialist</h3>
+          <p>
+            Managed dispatch coordination, scheduling, technician communication, appointment tracking, and workflow management for service-based operations.
+          </p>
+        </div>
       </div>
 
-      <div class="experience-card">
-        <span>2020 - 2024</span>
-        <h3>Foundever</h3>
-        <p>
-          SME Team Lead supporting QuickBooks Online and Payroll operations,
-          consistently achieving a 98% issue resolution rate.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Foundever | SME Team Lead</h3>
+          <p>
+            Led QuickBooks Online and Payroll support operations, managed escalations, coached support teams, and improved workflow documentation.
+          </p>
+        </div>
       </div>
 
-      <div class="experience-card">
-        <span>2016 - 2019</span>
-        <h3>SMC Zipitel IT Services</h3>
-        <p>
-          Served as Project Leader and Billing/Reservations Specialist,
-          handling customer coordination and operational support.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>SMC Zipitel IT Services | Project Leader</h3>
+          <p>
+            Managed project operations, payroll tax form development, client communication, and operational reporting.
+          </p>
+        </div>
       </div>
 
     </div>
 
-  </section>
+    <!-- TOOLS -->
 
-  <!-- SAMPLE WORKS -->
-  <section class="section">
+    <div style="margin-top:90px;">
 
-    <div class="section-header">
-      <h2>Sample Works</h2>
-      <div class="section-badge">Proven Workflows</div>
-    </div>
+      <h2 class="section-title">
+        Tools & Skills
+      </h2>
 
-    <!-- DISPATCH -->
-    <h3>Dispatch Coordination Dashboard</h3>
-    <div class="workflow-box">
-        <h4>Workflow</h4>
-        <ol>
-            <li>Receive customer booking request</li>
-            <li>Assign technician/team</li>
-            <li>Update calendar and schedule</li>
-            <li>Confirm appointment with customer</li>
-            <li>Monitor job completion</li>
-            <li>Update billing and invoice status</li>
-            <li>Perform customer follow-up</li>
-        </ol>
-    </div>
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Job ID</th>
-            <th>Service Type</th>
-            <th>Technician</th>
-            <th>Job Status</th>
-            <th>Client / Address</th>
-            <th>Promised Window</th>
-            <th>Dispatch Notes / Scope</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>JOB-401</td>
-            <td>HVAC</td>
-            <td>Robert Diaz (Lead Tech)</td>
-            <td><span class="status blue">In Progress</span></td>
-            <td>Henderson Residence (124 Oak St)</td>
-            <td>08:00 AM - 10:00 AM</td>
-            <td>AC compressor replacement; parts on truck.</td>
-          </tr>
-          <tr>
-            <td>JOB-402</td>
-            <td>Plumbing</td>
-            <td>Alex Mercer</td>
-            <td><span class="status yellow">En Route</span></td>
-            <td>Miller Commercial Group (Suite 4)</td>
-            <td>09:30 AM - 11:30 AM</td>
-            <td>Main line clog backup. Emergency dispatch.</td>
-          </tr>
-          <tr>
-            <td>JOB-403</td>
-            <td>Locksmith</td>
-            <td>Kevin Vance</td>
-            <td><span class="status red">Unassigned</span></td>
-            <td>Retail Shop (442 Broadway Blvd)</td>
-            <td>Immediate (Urgent)</td>
-            <td>Commercial rekey requested; tenant lockout.</td>
-          </tr>
-          <tr>
-            <td>JOB-404</td>
-            <td>Cleaning</td>
-            <td>Team Bravo (Sarah/Ana)</td>
-            <td><span class="status blue">In Progress</span></td>
-            <td>Patel Residence (89 Ocean Dr)</td>
-            <td>08:30 AM - 12:30 PM</td>
-            <td>Deep Clean / Move-Out checklist active.</td>
-          </tr>
-          <tr>
-            <td>JOB-405</td>
-            <td>HVAC</td>
-            <td>Marcus Cole</td>
-            <td><span class="status green">Completed</span></td>
-            <td>Gordon Household (711 Pine St)</td>
-            <td>07:00 AM - 09:00 AM</td>
-            <td>Semi-annual furnace tune-up & filter swap.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="grid cards-4">
+
+        <div class="card">
+          <h3>CRM & Support</h3>
+          <p>
+            Salesforce, Zendesk, LiveAgent, Amazon Connect, Cresta
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Accounting Tools</h3>
+          <p>
+            QuickBooks Online, QuickBooks Payroll, Billing & Invoice Tracking
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Productivity</h3>
+          <p>
+            Microsoft Excel, Google Sheets, Trello, Outlook, Gmail, Canva
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Core Skills</h3>
+          <p>
+            Customer Support, Dispatching, Scheduling, Administrative Support, SOP Documentation, Workflow Optimization
+          </p>
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- BILLING -->
-    <h3>Billing & Invoice Tracker</h3>
-    <div class="workflow-box">
-        <h4>Workflow</h4>
-        <ol>
-            <li>Generate invoice based on service completion</li>
-            <li>Ensure payment terms are set (Net 15/30 or Due on Receipt)</li>
-            <li>Track payment status via QuickBooks Online</li>
-            <li>Follow up on overdue invoices</li>
-            <li>Reconcile payments once received</li>
-        </ol>
-    </div>
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Invoice #</th>
-            <th>Client Name</th>
-            <th>Service Rendered</th>
-            <th>Job Date</th>
-            <th>Payment Terms</th>
-            <th>Invoice Total</th>
-            <th>Balance Due</th>
-            <th>Billing Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>INV-8840</td>
-            <td>Laura Higgins</td>
-            <td>Deadbolt Installation</td>
-            <td>May 22, 2026</td>
-            <td>Due on Receipt</td>
-            <td>$215.00</td>
-            <td>$0.00</td>
-            <td><span class="status green">Paid (cc on-site)</span></td>
-          </tr>
-          <tr>
-            <td>INV-8841</td>
-            <td>Apex Property Mgmt</td>
-            <td>Bi-Weekly Office Clean</td>
-            <td>May 15, 2026</td>
-            <td>Net 15</td>
-            <td>$650.00</td>
-            <td>$650.00</td>
-            <td><span class="status yellow">Awaiting Payment</span></td>
-          </tr>
-          <tr>
-            <td>INV-8842</td>
-            <td>Downtown Gym</td>
-            <td>Commercial Hydro-Jetting</td>
-            <td>Apr 20, 2026</td>
-            <td>Net 30</td>
-            <td>$1,200.00</td>
-            <td>$1,200.00</td>
-            <td><span class="status red">Overdue (23 Days)</span></td>
-          </tr>
-          <tr>
-            <td>INV-8843</td>
-            <td>Thomas Sterling</td>
-            <td>Emergency HVAC Repair</td>
-            <td>May 23, 2026</td>
-            <td>Due on Receipt</td>
-            <td>$485.00</td>
-            <td>$485.00</td>
-            <td><span class="status yellow">Pending Processing</span></td>
-          </tr>
-          <tr>
-            <td>INV-8844</td>
-            <td>Green Valley School</td>
-            <td>Post-Construction Clean</td>
-            <td>May 01, 2026</td>
-            <td>Net 15</td>
-            <td>$3,400.00</td>
-            <td>$0.00</td>
-            <td><span class="status green">Paid (Check)</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- ACHIEVEMENTS -->
+
+    <div style="margin-top:90px;">
+
+      <h2 class="section-title">
+        Achievements
+      </h2>
+
+      <div class="grid cards-3">
+
+        <div class="card">
+          <h3>🏆 Top SME (2022)</h3>
+          <p>
+            Achieved 98% issue resolution and strong customer satisfaction performance.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏆 Q3 Leaf Awardee (2024)</h3>
+          <p>
+            Recognized for outstanding contribution and operational excellence.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🏆 Top Agent</h3>
+          <p>
+            Maintained 100% TNPS and exceptional customer support performance.
+          </p>
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- FOLLOW UP -->
-    <h3>Customer Follow-Up Tracker</h3>
-    <div class="workflow-box">
-        <h4>Workflow</h4>
-        <ol>
-            <li>Review feedback logs from CRM/Support tickets</li>
-            <li>Analyze customer sentiment/rating</li>
-            <li>Identify necessary retention or corrective actions</li>
-            <li>Execute action (e.g., emailing invoice, offering voucher, or adding account notes)</li>
-            <li>Document resolution in CRM</li>
-        </ol>
-    </div>
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Client Name</th>
-            <th>Primary Service</th>
-            <th>Service Date</th>
-            <th>Tech Rating</th>
-            <th>Service Club Member?</th>
-            <th>Feedback / Issue Logged</th>
-            <th>Retention Action Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Eleanor Vance</td>
-            <td>HVAC (AC Tune-up)</td>
-            <td>May 18, 2026</td>
-            <td><span class="star-rating">★★★★★</span></td>
-            <td>Yes (Gold Plan)</td>
-            <td>Client loved tech's politeness. System running cold.</td>
-            <td>None. Send next winter scheduling reminder in Oct.</td>
-          </tr>
-          <tr>
-            <td>Rigid Realty LLC</td>
-            <td>Locksmith (Eviction Rekey)</td>
-            <td>May 21, 2026</td>
-            <td><span class="star-rating">★★★★☆</span></td>
-            <td>No</td>
-            <td>Fast service, but requested digital copy of invoice sent to main office.</td>
-            <td>Email PDF invoice copy to accounts payable team.</td>
-          </tr>
-          <tr>
-            <td>Mark Randal</td>
-            <td>Plumbing (Water Heater)</td>
-            <td>May 10, 2026</td>
-            <td><span class="star-rating">★★☆☆☆</span></td>
-            <td>No</td>
-            <td>Complaint: Tech left small muddy footprints on hallway rug.</td>
-            <td>Call client; offer $50 service voucher + complimentary rug cleaning.</td>
-          </tr>
-          <tr>
-            <td>Sarah Jenkins</td>
-            <td>Cleaning (Standard Maid)</td>
-            <td>May 22, 2026</td>
-            <td><span class="star-rating">★★★★★</span></td>
-            <td>Yes (Bi-Weekly)</td>
-            <td>Missed wiping down top of microwave, but overall very happy.</td>
-            <td>Note added to account file: "Check microwave interior weekly."</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- INDUSTRIES -->
+
+    <div style="margin-top:90px;">
+
+      <h2 class="section-title">
+        Ideal Industries I Support
+      </h2>
+
+      <div class="grid cards-4">
+
+        <div class="card"><h3>HVAC Companies</h3></div>
+        <div class="card"><h3>Cleaning Companies</h3></div>
+        <div class="card"><h3>Locksmith Services</h3></div>
+        <div class="card"><h3>Property Management</h3></div>
+        <div class="card"><h3>Plumbing Companies</h3></div>
+        <div class="card"><h3>Logistics & Dispatch</h3></div>
+        <div class="card"><h3>Service-Based Businesses</h3></div>
+        <div class="card"><h3>Customer Support Teams</h3></div>
+
+      </div>
+
     </div>
 
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
+  <!-- SERVICES -->
 
-    <h2>Let’s Streamline Your Operations</h2>
+  <section id="services">
 
-    <p>
-      Whether you need dispatch support, bookkeeping assistance,
-      customer service management, or administrative operations support,
-      I can help optimize your workflows and improve client experience.
+    <h2 class="section-title">
+      Services Offered
+    </h2>
+
+    <p class="section-sub">
+      Comprehensive virtual assistance and operational support services tailored for growing businesses and service-based companies.
     </p>
 
-    <button class="btn-main"
-      onclick="document.getElementById('callModal').style.display='block'">
-      Schedule a Discovery Call
-    </button>
+    <div class="grid cards-3">
+
+      <div class="card">
+
+        <h3>Customer Support Services</h3>
+
+        <ul>
+          <li>Phone Support</li>
+          <li>Email Support</li>
+          <li>Chat Support</li>
+          <li>Complaint Resolution</li>
+          <li>Customer Follow-Ups</li>
+          <li>Account Assistance</li>
+        </ul>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Dispatch Coordination & Scheduling</h3>
+
+        <ul>
+          <li>Technician Coordination</li>
+          <li>Calendar Management</li>
+          <li>Booking Management</li>
+          <li>Route & Schedule Updates</li>
+          <li>Operational Tracking</li>
+          <li>Workflow Documentation</li>
+        </ul>
+
+      </div>
+
+      <div class="card">
+
+        <h3>QuickBooks & Admin Support</h3>
+
+        <ul>
+          <li>QuickBooks Online Support</li>
+          <li>Payroll Assistance</li>
+          <li>Billing & Invoice Tracking</li>
+          <li>Data Entry</li>
+          <li>CRM Updates</li>
+          <li>SOP Documentation</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+<!-- SAMPLE WORKS -->
+
+    <div style="margin-top:90px;">
+    
+      <h2 class="section-title">
+        Sample Works / Projects
+      </h2>
+    
+      <p class="section-sub">
+        Sample operational dashboards, billing trackers, dispatch coordination sheets, and customer follow-up systems demonstrating workflow organization, customer support, scheduling, and administrative management.
+      </p>
+    
+      <!-- DISPATCH DASHBOARD -->
+    
+      <div class="table-wrapper">
+    
+        <h3 style="margin-bottom:20px; color:#0f172a;">
+          Dispatch Coordination Dashboard
+        </h3>
+    
+        <table>
+    
+          <thead>
+            <tr>
+              <th>Job ID</th>
+              <th>Service Type</th>
+              <th>Technician</th>
+              <th>Job Status</th>
+              <th>Client / Address</th>
+              <th>Promised Window</th>
+              <th>Dispatch Notes / Scope</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+    
+            <tr>
+              <td>JOB-401</td>
+              <td>🛠 HVAC</td>
+              <td>Robert Diaz (Lead Tech)</td>
+              <td>🟢 In Progress</td>
+              <td>Henderson Residence (124 Oak St)</td>
+              <td>08:00 AM - 10:00 AM</td>
+              <td>AC compressor replacement; parts on truck.</td>
+            </tr>
+    
+            <tr>
+              <td>JOB-402</td>
+              <td>🪠 Plumbing</td>
+              <td>Alex Mercer</td>
+              <td>🟡 En Route</td>
+              <td>Miller Commercial Group (Suite 4)</td>
+              <td>09:30 AM - 11:30 AM</td>
+              <td>Main line clog backup. Emergency dispatch.</td>
+            </tr>
+    
+            <tr>
+              <td>JOB-403</td>
+              <td>🔐 Locksmith</td>
+              <td>Kevin Vance</td>
+              <td>🔴 Unassigned</td>
+              <td>Retail Shop (442 Broadway Blvd)</td>
+              <td>Immediate (Urgent)</td>
+              <td>Commercial rekey requested; tenant lockout.</td>
+            </tr>
+    
+            <tr>
+              <td>JOB-404</td>
+              <td>🧹 Cleaning</td>
+              <td>Team Bravo (Sarah/Ana)</td>
+              <td>🟢 In Progress</td>
+              <td>Patel Residence (89 Ocean Dr)</td>
+              <td>08:30 AM - 12:30 PM</td>
+              <td>Deep Clean / Move-Out checklist active.</td>
+            </tr>
+    
+            <tr>
+              <td>JOB-405</td>
+              <td>🛠 HVAC</td>
+              <td>Marcus Cole</td>
+              <td>🔵 Completed</td>
+              <td>Gordon Household (711 Pine St)</td>
+              <td>07:00 AM - 09:00 AM</td>
+              <td>Semi-annual furnace tune-up & filter swap.</td>
+            </tr>
+    
+          </tbody>
+    
+        </table>
+    
+      </div>
+    
+      <!-- BILLING TRACKER -->
+    
+      <div class="table-wrapper">
+    
+        <h3 style="margin-bottom:20px; color:#0f172a;">
+          Billing & Invoice Tracker
+        </h3>
+    
+        <table>
+    
+          <thead>
+            <tr>
+              <th>Invoice #</th>
+              <th>Client Name</th>
+              <th>Service Rendered</th>
+              <th>Job Date</th>
+              <th>Payment Terms</th>
+              <th>Invoice Total</th>
+              <th>Balance Due</th>
+              <th>Billing Status</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+    
+            <tr>
+              <td>INV-8840</td>
+              <td>Laura Higgins</td>
+              <td>🔐 Deadbolt Installation</td>
+              <td>May 22, 2026</td>
+              <td>Due on Receipt</td>
+              <td>$215.00</td>
+              <td>$0.00</td>
+              <td>🟢 Paid (cc on-site)</td>
+            </tr>
+    
+            <tr>
+              <td>INV-8841</td>
+              <td>Apex Property Mgmt</td>
+              <td>🧹 Bi-Weekly Office Clean</td>
+              <td>May 15, 2026</td>
+              <td>Net 15</td>
+              <td>$650.00</td>
+              <td>$650.00</td>
+              <td>🟡 Awaiting Payment</td>
+            </tr>
+    
+            <tr>
+              <td>INV-8842</td>
+              <td>Downtown Gym</td>
+              <td>🪠 Commercial Hydro-Jetting</td>
+              <td>Apr 20, 2026</td>
+              <td>Net 30</td>
+              <td>$1,200.00</td>
+              <td>$1,200.00</td>
+              <td>🔴 Overdue (23 Days)</td>
+            </tr>
+    
+            <tr>
+              <td>INV-8843</td>
+              <td>Thomas Sterling</td>
+              <td>🛠 Emergency HVAC Repair</td>
+              <td>May 23, 2026</td>
+              <td>Due on Receipt</td>
+              <td>$485.00</td>
+              <td>$485.00</td>
+              <td>🟡 Pending Processing</td>
+            </tr>
+    
+            <tr>
+              <td>INV-8844</td>
+              <td>Green Valley School</td>
+              <td>🧹 Post-Construction Clean</td>
+              <td>May 01, 2026</td>
+              <td>Net 15</td>
+              <td>$3,400.00</td>
+              <td>$0.00</td>
+              <td>🟢 Paid (Check)</td>
+            </tr>
+    
+          </tbody>
+    
+        </table>
+    
+      </div>
+    
+      <!-- CUSTOMER FOLLOW-UP -->
+    
+      <div class="table-wrapper">
+    
+        <h3 style="margin-bottom:20px; color:#0f172a;">
+          Customer Follow-Up Tracker
+        </h3>
+    
+        <table>
+    
+          <thead>
+            <tr>
+              <th>Client Name</th>
+              <th>Primary Service</th>
+              <th>Service Date</th>
+              <th>Tech Rating</th>
+              <th>Service Club Member?</th>
+              <th>Feedback / Issue Logged</th>
+              <th>Retention Action Required</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+    
+            <tr>
+              <td>Eleanor Vance</td>
+              <td>🛠 HVAC (AC Tune-up)</td>
+              <td>May 18, 2026</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>Yes (Gold Plan)</td>
+              <td>Client loved tech's politeness. System running cold.</td>
+              <td>None. Send next winter scheduling reminder in Oct.</td>
+            </tr>
+    
+            <tr>
+              <td>Rigid Realty LLC</td>
+              <td>🔐 Locksmith (Eviction Rekey)</td>
+              <td>May 21, 2026</td>
+              <td>⭐⭐⭐⭐☆</td>
+              <td>No</td>
+              <td>Fast service, but requested digital invoice copy to office.</td>
+              <td>Email PDF invoice copy to accounts payable team.</td>
+            </tr>
+    
+            <tr>
+              <td>Mark Randal</td>
+              <td>🪠 Plumbing (Water Heater)</td>
+              <td>May 10, 2026</td>
+              <td>⭐⭐☆☆☆</td>
+              <td>No</td>
+              <td>Complaint: Tech left muddy footprints on hallway rug.</td>
+              <td>Call client; offer $50 service voucher + complimentary rug cleaning.</td>
+            </tr>
+    
+            <tr>
+              <td>Sarah Jenkins</td>
+              <td>🧹 Cleaning (Standard Maid)</td>
+              <td>May 22, 2026</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>Yes (Bi-Weekly)</td>
+              <td>Missed wiping down top of microwave, but overall very happy.</td>
+              <td>Note added to account file: "Check microwave interior weekly."</td>
+            </tr>
+    
+          </tbody>
+    
+        </table>
+    
+      </div>
+    
+    </div>
+  </section>
+
+  <!-- PRICING -->
+
+  <section id="pricing">
+
+    <h2 class="section-title">
+      Pricing & Packages
+    </h2>
+
+    <p class="section-sub">
+      Flexible virtual assistant packages designed for startups, growing businesses, and service-based companies.
+    </p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+
+        <h2>BASIC</h2>
+
+        <div class="price">
+          $500
+        </div>
+
+        <p style="margin-bottom:20px;">
+          15 hours/week
+        </p>
+
+        <ul>
+          <li>QuickBooks Data Entry</li>
+          <li>Invoice Assistance</li>
+          <li>Email & Chat Support</li>
+          <li>CRM Documentation</li>
+          <li>Weekly Reports</li>
+        </ul>
+
+      </div>
+
+      <div class="pricing-card featured">
+
+        <h2>STANDARD</h2>
+
+        <div class="price">
+          $800
+        </div>
+
+        <p style="margin-bottom:20px;">
+          25 hours/week
+        </p>
+
+        <ul>
+          <li>QuickBooks Maintenance</li>
+          <li>Expense Tracking</li>
+          <li>Customer Support</li>
+          <li>Issue Resolution</li>
+          <li>SOP Documentation</li>
+        </ul>
+
+      </div>
+
+      <div class="pricing-card">
+
+        <h2>PREMIUM</h2>
+
+        <div class="price">
+          $1300
+        </div>
+
+        <p style="margin-bottom:20px;">
+          40 hours/week
+        </p>
+
+        <ul>
+          <li>Full Customer Lifecycle Support</li>
+          <li>Advanced Reconciliation</li>
+          <li>Collections Follow-Up</li>
+          <li>Knowledge Base Creation</li>
+          <li>Process Optimization</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- ADD ONS -->
+
+    <div style="margin-top:80px;">
+
+      <h2 class="section-title">
+        Add-On Services
+      </h2>
+
+      <div class="grid cards-4">
+
+        <div class="card">
+          <h3>Payroll Assistance</h3>
+          <p>$200/month</p>
+        </div>
+
+        <div class="card">
+          <h3>Bookkeeping Cleanup</h3>
+          <p>$10/hour</p>
+        </div>
+
+        <div class="card">
+          <h3>Customer Service QA Audit</h3>
+          <p>$10/hour</p>
+        </div>
+
+        <div class="card">
+          <h3>Executive Admin Support</h3>
+          <p>$6/hour</p>
+        </div>
+
+      </div>
+
+    </div>
 
   </section>
 
-</div>
+  <!-- CONTACT -->
 
-<!-- MODAL -->
-<div id="callModal" class="modal">
+  <section id="contact">
 
-  <div class="modal-content">
+    <div class="contact">
 
-    <span
-      class="close"
-      onclick="document.getElementById('callModal').style.display='none'">
-      &times;
-    </span>
+      <h2>
+        Let’s Work Together
+      </h2>
 
-    <h2>Book a Discovery Call</h2>
+      <p>
+        I help businesses stay organized, responsive, and efficient through reliable virtual assistance and operational support.
+      </p>
 
-    <form action="https://formspree.io/f/xpqnrygd" method="POST">
+      <p>
+        📍 Teresa, Rizal, Philippines
+      </p>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Full Name"
-        required>
+      <p>
+        📞 +63 950 729 7240
+      </p>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email Address"
-        required>
+      <p>
+        📧 maf aithgrantoza@gmail.com
+      </p>
 
-      <textarea
-        name="message"
-        placeholder="Tell me about your business needs or project details..."
-        required></textarea>
+      <div class="hero-buttons" style="justify-content:center; margin-top:30px;">
 
-      <button
-        type="submit"
-        class="btn-main"
-        style="width:100%;">
-        Send Request
-      </button>
+        <a href="https://www.linkedin.com/in/faithgrantozaaa" target="_blank" class="btn primary">
+          Connect on LinkedIn
+        </a>
 
-    </form>
+        <a href="mailto:mafaithgrantoza@gmail.com" class="btn secondary">
+          Send Email
+        </a>
 
-  </div>
+      </div>
 
-</div>
+    </div>
 
-<script>
+  </section>
 
-  // CLOSE MODAL WHEN CLICKING OUTSIDE
-  window.onclick = function(event) {
-    if (event.target == document.getElementById('callModal')) {
-      document.getElementById('callModal').style.display = "none";
-    }
-  }
-
-</script>
+  <footer>
+    © 2026 Maria Faith Grantoza • Virtual Assistant Portfolio
+  </footer>
 
 </body>
 </html>
