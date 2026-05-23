@@ -159,16 +159,19 @@
       min-height:100vh;
     
       display:grid;
-      grid-template-columns:1.1fr 0.85fr;
+    
+      grid-template-columns:
+      minmax(0,1.2fr)
+      minmax(380px,480px);
     
       align-items:center;
     
-      gap:50px;
+      gap:60px;
     
       padding:
-      150px
+      140px
       clamp(24px,6vw,90px)
-      100px;
+      90px;
     
       overflow:hidden;
     
@@ -611,27 +614,25 @@
       background:linear-gradient(to right,#2563eb,#7c3aed,#06b6d4);
     }
     
-  @media(max-width:950px){
-  
-    .hero{
-      grid-template-columns:1fr;
-  
-      text-align:center;
-  
-      gap:50px;
-  
-      padding-top:140px;
+    @media(max-width:950px){
+    
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:50px;
+      }
+    
+      .hero-card{
+        width:100%;
+        max-width:520px;
+        margin:auto;
+      }
+    
+      .hero-buttons{
+        justify-content:center;
+      }
+    
     }
-  
-    .hero-card{
-      justify-self:center;
-    }
-  
-    .hero-buttons{
-      justify-content:center;
-    }
-  
-  }
     
       .timeline::before{
         left:20px;
@@ -725,47 +726,59 @@
   <!-- HOME -->
 
   <section class="hero" id="home">
-
-  <div class="hero-overlay"></div>
-
+  
+    <div class="hero-overlay"></div>
+  
+    <!-- LEFT SIDE -->
+  
     <div class="hero-text">
-
+  
       <span class="tag">
         Virtual Assistant • Dispatcher • Customer Support Specialist
       </span>
-
+  
       <h1>
         Helping Businesses Stay Organized, Efficient & Customer-Focused
       </h1>
-
+  
       <p>
-        Hi, I’m Maria Faith Grantoza — a Virtual Assistant with experience in customer support, dispatch coordination, QuickBooks support, scheduling, operations management, and administrative assistance. I help businesses streamline workflows, improve customer experience, and maintain organized daily operations.
+        Hi, I’m Maria Faith Grantoza — a Virtual Assistant with experience in customer support, dispatch coordination, QuickBooks support, scheduling, operations management, and administrative assistance.
       </p>
-
+  
       <div class="hero-buttons">
-
-        <a href="https://calendly.com/mafaithgrantoza/30min" target="_blank" class="btn primary">
-          Book a Discovery Call
+  
+        <a href="https://calendly.com/mafaithgrantoza/30min"
+           target="_blank"
+           class="btn primary">
+           Book a Discovery Call
         </a>
-
-        <a href="https://www.linkedin.com/in/faithgrantozaaa" target="_blank" class="btn secondary">
-          LinkedIn
+  
+        <a href="https://www.linkedin.com/in/faithgrantozaaa"
+           target="_blank"
+           class="btn secondary">
+           LinkedIn
         </a>
-
-        <a href="MariaFaithGrantoza_Resume.pdf" target="_blank" class="btn secondary">
-          View Resume
+  
+        <a href="MariaFaithGrantoza_Resume.pdf"
+           target="_blank"
+           class="btn secondary">
+           View Resume
         </a>
-
+  
       </div>
-
+  
     </div>
-
+  
+    <!-- RIGHT SIDE -->
+  
     <div class="hero-card">
-
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="VA">
-
+  
+      <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+        alt="VA">
+  
       <h3>Why Work With Me?</h3>
-
+  
       <p>
         ✔ Strong customer communication skills<br><br>
         ✔ Experienced in fast-paced service environments<br><br>
@@ -774,6 +787,8 @@
         ✔ Reliable and proactive<br><br>
         ✔ Experienced with CRM systems and remote tools
       </p>
+  
+    </div>
 
     <div class="section-divider"></div>
 
